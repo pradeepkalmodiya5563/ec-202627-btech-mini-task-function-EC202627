@@ -13,3 +13,17 @@ book_title = " ".join(data[:-1])   # default assumption
 days_overdue = int(data[-1])
 daily_rate = 5.0
 max_fine = 150.0
+# Handle optional inputs
+if len(data) >= 3:
+    try:
+        days_overdue = int(data[-3])
+        daily_rate = float(data[-2])
+        max_fine = float(data[-1])
+        book_title = " ".join(data[:-3])
+    except:
+        try:
+            days_overdue = int(data[-2])
+            daily_rate = float(data[-1])
+            book_title = " ".join(data[:-2])
+        except:
+            pass
