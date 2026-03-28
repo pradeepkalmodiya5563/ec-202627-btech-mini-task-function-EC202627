@@ -9,3 +9,7 @@ def calculate_fine(book_title, days_overdue, daily_rate=5.0, max_fine=150.0):
     return fine, max_msg
     # -------- MAIN PROGRAM --------
 data = input().split()
+book_title = " ".join(data[:-1])   # default assumption
+days_overdue = int(data[-1])
+daily_rate = 5.0
+max_fine = 150.0
