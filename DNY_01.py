@@ -27,3 +27,9 @@ if len(data) >= 3:
             book_title = " ".join(data[:-2])
         except:
             pass
+            fine, max_msg = calculate_fine(book_title, days_overdue, daily_rate, max_fine)
+
+print(f"Book: {book_title} Days overdue: {days_overdue} Fine: Rs. {fine}")
+
+if max_msg:
+    print(f"You have accumulated the maximum fine of INR: {max_fine}")
